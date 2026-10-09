@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Delete Account - RankBall</title>
+</head>
+<body>
+    <h2>Delete Your RankBall Account</h2>
+
+    <div id="auth-section">
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="signIn()">Sign In</button>
+    </div>
+
+    <div id="delete-section" style="display:none;">
+        <p>Signed in as: <span id="user-email"></span></p>
+        <button onclick="deleteAccount()">Delete My Account</button>
+    </div>
+
+    <p id="status"></p>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      onAuthStateChanged,
+      deleteUser,
+      reauthenticateWithCredential,
+      EmailAuthProvider
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    // FIREBASE CONFIG
+    const firebaseConfig = {
+        apiKey: "AIzaSyAw1b0nFhvQJ1T_c4GsO1hleOjvPpgQRKk",
+        authDomain: "rankball-app.firebaseapp.com",
+        projectId: "rankball-app",
+        storageBucket: "rankball-app.firebasestorage.app",
+        messagingSenderId: "207253550969",
+        appId: "1:207253550969:web:c1f516941ff928e6b721a8"
+    };
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const status = document.getElementById("status");
+
+    // Auth state listener
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        document.getElementById("auth-section").style.display = "none";
+        document.getElementById("delete-section").style.display = "block";
+        document.getElementById("user-email").innerText = user.email;
+      } else {
+        document.getElementById("auth-section").style.display = "block";
+        document.getElementById("delete-section").style.display = "none";
+      }
+    });
+
+    // Sign in
+    window.signIn = async () => {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        status.innerText = "Signed in successfully.";
+      } catch (err) {
+        status.innerText = err.message;
+      }
+    };
+
+    // Delete account (requires re-auth)
+    window.deleteAccount = async () => {
+      const user = auth.currentUser;
+
+      if (!user) {
+        status.innerText = "No user signed in.";
+        return;
+      }
+
+      const password = prompt("Please re-enter your password to confirm deletion:");
+
+      if (!password) {
+        status.innerText = "Deletion cancelled.";
+        return;
+      }
+
+      try {
+        // Re-authenticate
+        const credential = EmailAuthProvider.credential(user.email, password);
+        await reauthenticateWithCredential(user, credential);
+
+        // Delete user
+        await deleteUser(user);
+
+        status.innerText = "Account deleted successfully.";
+      } catch (err) {
+        status.innerText = "Error: " + err.message;
+      }
+    };
+    </script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WorkPrint Studios</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/workprint_studios_logo_no_text.webp" type="image/png">
+    
+    <style>
+        
+        body {
+            background-color: rgba(229, 229, 229, 1);
+            margin: 0;
+            padding-top: 0;
+            font-family: Arial, sans-serif;
+            
+            flex-direction: row;
+        }
+
+        
+        .sidebar {
+            background-color: rgba(51, 51, 51,0);
+            color: white;
+            padding: 0px;
+            width: 12%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            
+            transition: background-color 0.3s; 
+            border-top-right-radius: 10px; 
+            float: right;
+        }
+        .newsidebar {
+            background-color: rgba(51, 51, 51,0);
+            color: white;
+            padding: 0px;
+            width: 10%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            justify-content: right;
+            display: none;
+            
+            transition: background-color 0.3s; 
+            border-top-right-radius: 10px; 
+            float: right;
+            
+        }
+
+        .opening {
+            
+            
+            padding-right: 0; 
+            transition: padding-right 0.3s; 
+            padding-top: 5%; 
+
+        }
+
+        
+        .main-content {
+            
+            
+            padding-right: 0; 
+            transition: padding-right 0.3s; 
+            padding-top: 5%; 
+
+        }
+
+
+        
+
+        .hidden-text {
+                 display: none;
+        }
+
+        header {
+        background-color: rgba(1, 1, 1, 0.75);
+        height: 10%;
+        color: white;
+        padding: 0px;
+        position: fixed; 
+        width: 100%; 
+        top: 0; 
+        left: 0;
+        transition: background-color 0.3s; 
+        border-bottom-left-radius: 10px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .navi{
+            padding-right: 5%;
+        }
+
+        
+        nav ul {
+             
+            align-content: center;
+            display:inline;
+            
+
+        }
+        nav .ul2 {
+             
+             color: #ffffff;
+ 
+         }
+        
+
+        nav li {
+            
+            
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 0px 10px 0px 10px;
+            display: inline;
+        }
+        nav a:hover {
+            color: black; 
+        }
+
+        
+        
+
+        
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            
+        }
+        
+          .dropdown {
+            position: relative;
+            display: inline-block;
+            display: inline;
+        }
+
+        .dropdown-button {
+            background-color: rgba(255, 255, 255, 1);
+            color: rgba(51, 51, 51, 1);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        menu {
+            display: flex;
+            align-items: center;
+        }
+
+        menu li {
+            list-style: none;
+            margin-right: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 0;
+            text-align: center;
+        }
+
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0;
+        }
+
+        
+        footer a:hover {
+            color:black;
+        }
+        .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
+
+    
+
+       
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+     <div class="sidebar">
+        
+    </div>
+    <!-- New Sidebar -->        
+    <div class="newsidebar">
+        <img src="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/workprint_studios_logo2x.webp" alt="Workprint Studios Logo" style=" margin-left: 5 auto; width: 80%; height: auto">
+        <br>
+        <p></p>
+        <img src="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/wdamo_film_title_text_only_black_background.webp" alt="Workprint Studios Logo" style=" margin-left: 5 auto; width: 80%; height: auto">
+        <nav>
+            <ul>                        
+                <li><a href="#section2" style="font-family: Playfair Display; text-align:center;">Poster</a></li>
+                <br>
+                <li><a href="#section3" style="font-family: Playfair Display; text-align:center;">Stills</a></li>
+            </ul>  
+        </nav>
+    </div>
+
+    <!--Header-->
+    
+    <header>
+        
+        <!-- Navi-->
+        <div class="navi">
+            
+            <menu>
+                
+                <div class="dropdown">
+                    <button class="dropdown-button">Menu</button>
+                    <div class="dropdown-content">
+                        
+                <nav>
+                    <ul>                        
+                        <a href="https://www.workprintstudios.com">Home</a>
+                        <a href="https://www.workprintstudios.com/films">Films</a>
+                        <a href="https://www.workprintstudios.com/apps">Apps</a>
+                    </ul>  
+                </nav>
+            </div>
+        </div>
+                
+                    
+                
+            </menu>
+        </div>
+           
+            
+
+    </header>
+    
+
+    
+    <div>
+        <div class="opening">
+        
+     
+
+
+            
+            <section id="section1">
+
+                
+
+                <img src="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/workprint_studios_logo2x.webp" alt="Workprint Studios Logo" 
+                    style="display: block; margin: 0 auto; width: 50%; height: auto"
+                    >
+
+                
+                
+            </section>
+        
+        </div>  
+    </div>      
+
+                         
+   
+
+        <!-- Body -->
+        <div class="main-content" >
+                
+           
+
+
+                    
+            
+            <section id="section2" style="position:relative;  z-index:-1">
+                <br>
+                <h2 style="font-family: Playfair Display; margin:4% 25% 2% 25%;  text-align:center;"><b>POSTER</b></h2>
+                
+                
+                <img src="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/poster1_reduced.webp" alt="What Dreams are Made of Poster" 
+                    style="display: block; margin: 0 auto; width: 25%; height: auto">
+
+
+
+                
+
+
+                <p style="font-family: Playfair Display; margin:0 35% 5% 35%; text-align:center;"><i>What Dreams are Made of</i> follows Sky in her struggle to cope with life's challanges and examines her attempts to gain independance. </p>
+            
+                
+                
+            </section>
+
+            <section id="section3" style="position:relative; padding-top: 5%; z-index:-1">
+                <div class="stills">
+                    <h2 style="font-family: Playfair Display; text-align:center;"><b>STILLS</b></h2>
+                    <a href="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/wdamo_frame-at-0m42s.webp" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/wdamo_frame-at-0m42s.webp" alt="what dreams are made of 0m42s" 
+                    style="display: block; margin: 0 auto; width: 50%; height: auto"></a>
+                    <br>
+                    <a href="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/wdamo_frame-at-2m48s.webp" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/wdamo_frame-at-2m48s.webp" alt="What Dreams are Made of 2m48s" 
+                    style="display: block; margin: 0 auto; width: 50%; height: auto"></a>
+                    <br>
+                    <a href="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/wdamo_frame-at-6m25s.webp" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/wdamo_frame-at-6m25s.webp" alt="What Dreams are Made of 6m25s" 
+                    style="display: block; margin: 0 auto; width: 50%; height: auto">
+                    <br style= "margin: 0 0 25% 0;"></a></br>
+                    
+                    
+                </div>
+            </section>
+
+            <section id="section4">
+                <div class="video-container">
+                    <a href="https://youtube.com/embed/rIyZAP_tAKs" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/WORKPRINT-STUDIOS-logo.webp" alt="WorkPrint Studios Title Screen" 
+                    style="display: block; margin: 0 auto; width: 25%; height: auto">                  
+                    </a>
+                </div>
+            </section>
+
+
+            
+            
+        </div>  
+        <footer>
+            <p>  </p>
+            <nav2>
+                <div class="ul2">   
+                    <a style="text-align: left"> WORKPRINT STUDIOS &trade; &copy; 2022-2023 </a>  
+                                            
+                    <a href="https://www.workprintstudios.com/cookie-policy/"; style= "padding: 0px 0px 10px 10px";>Cookie Policy</a>
+                    <a href="https://www.workprintstudios.com/privacy-policy"; style= "padding: 0px 0px 10px 10px";>Privacy Policy</a>       
+                    <a href="https://www.workprintstudios.com/terms-of-use/"; style= "padding: 0px 0px 10px 10px";>Terms of Use</a>                 
+                </div>  
+            </nav2>
+        </footer>  
+    <script>
+        const header = document.querySelector('header');
+        const sidebar = document.querySelector('.sidebar');
+        const mainContent = document.querySelector('.opening');
+        const mainContent2 = document.querySelector('.main-content');
+        const newsidebar = document.querySelector('.newsidebar');
+        const navicontent = document.querySelector('.navi');
+        const navLinks = document.querySelectorAll('nav a');
+
+        let isSidebarHidden = false;
+        let isImgNewsidebarHidden = true;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(200, 200, 200,1)';
+                header.style.color = 'black';
+                header.style.left = '12%';
+                sidebar.style.display = 'none';
+                newsidebar.style.display = 'block';
+                newsidebar.style.width = '12%';
+                newsidebar.style.paddingTop = '10%';
+                mainContent.style.paddingTop = '0';
+                isSidebarHidden = true;
+                mainContent.style.paddingRight = '100%';
+                mainContent.style.paddingLeft = '0%';
+
+                mainContent2.style.paddingTop = '0%';
+
+                navLinks.forEach(link => {
+                    link.style.color = 'black';
+
+                    link.addEventListener('mouseover', () => {
+                        link.style.color = 'black';
+                    });
+
+                    link.addEventListener('mouseout', () => {
+                        link.style.color = 'black';
+                    });
+                });
+
+            } else {
+                header.style.backgroundColor = 'rgba(1, 1, 1, 0.75)';
+                header.style.color = 'black';
+                header.style.left = '0';
+                navicontent.style.paddingRight = '5%';
+                sidebar.style.display = 'block';
+                sidebar.style.width = '12%';
+                newsidebar.style.display = 'none';
+                newsidebar.style.width = '0';
+                isSidebarHidden = false;
+                mainContent.style.paddingRight = '0';
+                mainContent.style.paddingLeft = '0%';
+                mainContent.style.paddingTop = '0';
+                mainContent2.style.paddingTop = '5%';
+
+                navLinks.forEach(link => {
+                    link.style.color = 'black';
+
+                    link.addEventListener('mouseover', () => {
+                        link.style.color = 'black';
+                    });
+
+                    link.addEventListener('mouseout', () => {
+                        link.style.color = 'black';
+                    });
+                }
+            );
+        }
+    });
+</script>
+</body>
+
+</html>
+
+
+
+
+
+

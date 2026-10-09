@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Apps by Workprint Studios</title>
+    <link rel="icon" href="./wp-content/uploads/2023/10/workprint_studios_logo_no_text.webp" type="image/png">
+
+    <style>
+        body {
+            background-color: rgba(229, 229, 229, 1);
+            margin: 0;
+            padding-top: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: rgba(1, 1, 1, 0.75);
+            height: 10%;
+            color: white;
+            padding: 0px;
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            left: 0;
+            transition: background-color 0.3s; 
+            border-bottom-left-radius: 10px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navi {
+            padding-right: 5%;
+        }        
+
+        .main-content {
+            padding-top: 12%;
+            text-align: center;
+        }
+
+        .apps-title {
+            font-size: 200%;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 2%;
+        }
+
+        .apps-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .app-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .app-card img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .app-name {
+            font-weight: bold;
+            font-size: 120%;
+            margin-bottom: 10px;
+        }
+
+        .app-desc {
+            font-size: 90%;
+            color: #444;
+        }
+
+       
+        
+
+        
+        nav ul {
+             
+            align-content: center;
+            display:inline;
+            
+
+        }
+        nav .ul2 {
+             
+             color: #ffffff;
+ 
+         }
+        
+
+        nav li {
+            
+            
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 0px 10px 0px 10px;
+            display: inline;
+        }
+        nav a:hover {
+            color: black; 
+        }                  
+            
+       .dropdown {
+        position: relative;
+        display: inline-block;
+        display: inline;
+        }
+
+        .dropdown-button {
+            background-color: rgba(255, 255, 255, 1);
+            color: rgba(51, 51, 51, 1);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        menu {
+            display: flex;
+            align-items: center;
+        }
+
+        menu li {
+            list-style: none;
+            margin-right: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 0;
+            text-align: center;
+        }
+
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0;
+        }
+
+        
+        footer a:hover {
+            color:black;
+        }
+        .card-display {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+            gap: 16px; /* spacing between cards */
+        }
+        .play-links {
+            height: 50px;
+            width: 120px;
+            margin-top: 15px;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+     <header>
+         <!-- Navi-->
+        <div class="navi">
+            
+            <menu>
+                
+                <div class="dropdown">
+                    <button class="dropdown-button">Menu</button>
+                    <div class="dropdown-content">
+                        
+                <nav>
+                    <ul>                        
+                        <a href="../">Home</a>
+                        <a href="../films">Films</a>
+                        <a href="../apps">Apps</a>
+
+                    </ul>  
+                </nav>
+            </div>
+        </div>
+                
+                    
+                
+            </menu>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <div class="main-content">
+        <h1 class="apps-title">Apps by Workprint Studios</h1>
+        <div class="card-display">        
+            <div class="app-card" onclick="window.open('../rankball', '_blank')" style="cursor:pointer; padding: 20px;">
+                <img src="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/rankball_logo.png" alt="Rankball Logo">
+                <div class="app-name">Rankball</div>
+                <div class="app-desc">
+                    A sports player ranker for coaches to track and evaluate players’ abilities. 
+                    Currently for baseball, with football, soccer, and more coming soon.
+                </div>
+            
+               <div class="play-links"> <!-- Google Play button INSIDE the card -->
+                    <a href="https://play.google.com/store/apps/details?id=com.workprintstudios.rankball" 
+                       target="_blank" 
+                       onclick="event.stopPropagation();">
+                        <img alt="Get it on Google Play"
+                             src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/>
+                    </a>
+                </div>
+            </div>
+            <div class="app-card" onclick="window.open('https://www.studioroster.com/', '_blank')" style="cursor:pointer; padding: 20px;">
+                <img src="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/wp-content/uploads/2023/10/studio_roster_logo_100.png" alt="Studio Roster Logo">
+                <div class="app-name">Studio Roster</div>
+                <div class="app-desc">
+                   A Film Production organization and communication app. 
+                    Manage cast/crew, message, role requests, and a script wizard start off projects. 
+                </div>
+            
+               <div class="play-links">
+                    <a href="https://play.google.com/store/apps/details?id=com.workprintstudios.studioroster" 
+                        target="_blank" onclick="event.stopPropagation();">
+                        <img alt="Get it on Google Play"
+                            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/>
+                    </a>
+               </div>
+            </div>
+            <div class="app-card" onclick="window.open('https://suitediffusion.workprintstudios.us', '_blank')" style="cursor:pointer; padding: 20px;">
+                <img src="https://suitediffusion.workprintstudios.us/images/image_txt2img.png" alt="Suite Diffusion Logo">
+                <div class="app-name">Suite Diffusion</div>
+                <div class="app-desc">
+                   An Ai Multi-Modal app for generating, modifying and interacting with Audio, Images, and Video.
+                </div>
+            
+               <div class="play-links">
+                    <a href="https://play.google.com/store/apps/details?id=com.workprintstudios.suitediffusion" 
+                        target="_blank" onclick="event.stopPropagation();">
+                        <img alt="Get it on Google Play"
+                            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/>
+                    </a>
+               </div>
+            </div>
+            <div class="app-card" onclick="window.open('https://play.google.com/store/apps/details?id=com.workprintstudios.tcgamerpro', '_blank')" style="cursor:pointer; padding: 20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); background:white; max-width:300px; margin:10px;">
+                <img src="https://raw.githubusercontent.com/workprintstudios/workprint-website/main/tcgamerpro/images/tcgamerpro_logo.png" alt="TCGamerPro Logo">
+                <div class="app-name">TCGamerPro</div>
+                <div class="app-desc">
+                    Scan, track, and manage your trading card collection instantly. Save cards to collections, export and reimport your app data, and access daily prices for a majority of English Pokémon cards.
+                </div>
+            
+                <div class="play-links" style="margin-top:12px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.workprintstudios.tcgamerpro" 
+                       target="_blank" onclick="event.stopPropagation();">
+                        <img alt="Get it on Google Play"
+                             src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <nav2>
+            <a href="https://www.workprintstudios.com/cookie-policy/">Cookie Policy</a>
+            <a href="https://www.workprintstudios.com/privacy-policy">Privacy Policy</a>
+            <a href="https://www.workprintstudios.com/terms-of-use/">Terms of Use</a>
+        </nav2>
+        <p style="text-align: center">WORKPRINT STUDIOS &trade; &copy; 2022-2023</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
